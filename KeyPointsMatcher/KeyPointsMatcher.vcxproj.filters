@@ -18,9 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="KeyPointDetetAndMatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="KeyPointDetectorAndMatcher.h">
+    <ClInclude Include="KeyPointDetectAndMatch.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
