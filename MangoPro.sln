@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PGRDriver", "PGRDriver\PGRDriver.vcxproj", "{60738CA5-0600-4F6C-A320-2C37316904BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyPointsMatcher", "KeyPointsMatcher\KeyPointsMatcher.vcxproj", "{D903F4E7-1491-4E3B-8D4B-51877F9AF478}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StereoCorrespondence", "StereoCorrespondence\StereoCorrespondence.vcxproj", "{62DA8F35-56DE-425E-98BB-538323A2D158}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExtrinsicComputer", "ExtrinsicComputer\ExtrinsicComputer.vcxproj", "{2361441E-DC84-4227-A4F6-B459E7B4B3FF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MangoPro", "MangoPro\MangoPro.vcxproj", "{6AF85DE4-5F6B-4B90-B428-2FC12F4ECAB6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EstimateDistance", "EstimateDistance--old\EstimateDistance.vcxproj", "{D3299C0B-554B-44C7-BAF5-73D89E92989D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60738CA5-0600-4F6C-A320-2C37316904BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60738CA5-0600-4F6C-A320-2C37316904BB}.Debug|Win32.Build.0 = Debug|Win32
+		{60738CA5-0600-4F6C-A320-2C37316904BB}.Release|Win32.ActiveCfg = Release|Win32
+		{60738CA5-0600-4F6C-A320-2C37316904BB}.Release|Win32.Build.0 = Release|Win32
+		{D903F4E7-1491-4E3B-8D4B-51877F9AF478}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D903F4E7-1491-4E3B-8D4B-51877F9AF478}.Debug|Win32.Build.0 = Debug|Win32
+		{D903F4E7-1491-4E3B-8D4B-51877F9AF478}.Release|Win32.ActiveCfg = Release|Win32
+		{D903F4E7-1491-4E3B-8D4B-51877F9AF478}.Release|Win32.Build.0 = Release|Win32
+		{62DA8F35-56DE-425E-98BB-538323A2D158}.Debug|Win32.ActiveCfg = Debug|Win32
+		{62DA8F35-56DE-425E-98BB-538323A2D158}.Debug|Win32.Build.0 = Debug|Win32
+		{62DA8F35-56DE-425E-98BB-538323A2D158}.Release|Win32.ActiveCfg = Release|Win32
+		{62DA8F35-56DE-425E-98BB-538323A2D158}.Release|Win32.Build.0 = Release|Win32
+		{2361441E-DC84-4227-A4F6-B459E7B4B3FF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2361441E-DC84-4227-A4F6-B459E7B4B3FF}.Debug|Win32.Build.0 = Debug|Win32
+		{2361441E-DC84-4227-A4F6-B459E7B4B3FF}.Release|Win32.ActiveCfg = Release|Win32
+		{2361441E-DC84-4227-A4F6-B459E7B4B3FF}.Release|Win32.Build.0 = Release|Win32
+		{6AF85DE4-5F6B-4B90-B428-2FC12F4ECAB6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AF85DE4-5F6B-4B90-B428-2FC12F4ECAB6}.Debug|Win32.Build.0 = Debug|Win32
+		{6AF85DE4-5F6B-4B90-B428-2FC12F4ECAB6}.Release|Win32.ActiveCfg = Release|Win32
+		{6AF85DE4-5F6B-4B90-B428-2FC12F4ECAB6}.Release|Win32.Build.0 = Release|Win32
+		{D3299C0B-554B-44C7-BAF5-73D89E92989D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3299C0B-554B-44C7-BAF5-73D89E92989D}.Debug|Win32.Build.0 = Debug|Win32
+		{D3299C0B-554B-44C7-BAF5-73D89E92989D}.Release|Win32.ActiveCfg = Release|Win32
+		{D3299C0B-554B-44C7-BAF5-73D89E92989D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

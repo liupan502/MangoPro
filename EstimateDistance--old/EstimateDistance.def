@@ -1,0 +1,3 @@
+LIBRARY "EstimateDistance"
+EXPORTS
+EstimateDistance @1
