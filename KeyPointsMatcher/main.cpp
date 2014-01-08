@@ -3,11 +3,12 @@
 using namespace std;
 
 const string imgPathSet[] = {
-	"E:\\pgr\\gangjianglu10hz\\result\\0020\\00000200\\0\\Cam1.jpg",
-	"E:\\pgr\\gangjianglu10hz\\result\\0020\\00000200\\1\\Cam1.jpg",
-	"E:\\pgr\\gangjianglu10hz\\result\\0020\\00000200\\2\\Cam1.jpg"
+	"E:\\pgr\\gangjianglu10hz\\result\\0020\\00000500\\0\\Cam1.jpg",
+	"E:\\pgr\\gangjianglu10hz\\result\\0020\\00000500\\1\\Cam1.jpg",
+	"E:\\pgr\\gangjianglu10hz\\result\\0020\\00000500\\2\\Cam1.jpg"
 };
-const int imgNum = 3;
+const int imgNum =3;
+const int camerIdx = 1;
 int main()
 {
 	vector<Mat> matSet;
@@ -26,7 +27,7 @@ int main()
 	for(vector<Mat>::iterator it = matSet.begin();it != matSet.end(); it++)
 	{
 		Mat mask(it->rows,it->cols,CV_8UC1);
-		if(!GetCarMask(1,it->cols,it->rows,true,mask))
+		if(!GetCarMask(camerIdx,it->cols,it->rows,true,mask))
 		{			
 			return -1;
 		}

@@ -1,4 +1,5 @@
 #include "KeyPointDetectAndMatch.h"
+#include "Tensor.h"
 #include <set>
 //const char* imgPath1 = "E:\\pgr\\gangjianglu10hz\\result\\0020\\00000200\\0\\Cam1.jpg"; 
 //const char* imgPath2 = "E:\\pgr\\gangjianglu10hz\\result\\0020\\00000200\\1\\Cam1.jpg"; 
@@ -218,12 +219,16 @@ void KeyPointMatch(vector<Mat>& descriptorsSet,vector<KeyPoints>& keyPointsSet,
 	/*int num =14;*/
 	relation = strictRelation;
 	vector<Point2f> pointSet1,pointSet2,pointSet3;
+	vector<vector<Point2f>> pointSets;
 	for(size_t index = 0;index < strictRelation.size();index++)
 	{
-		pointSet1.push_back(keyPointsSet[strictRelation[index][0].first][strictRelation[index][0].second].pt);
-		pointSet2.push_back(keyPointsSet[strictRelation[index][1].first][strictRelation[index][1].second].pt);
-		pointSet3.push_back(keyPointsSet[strictRelation[index][2].first][strictRelation[index][2].second].pt);
+		pointSet1.push_back(keyPointsSet[strictRelation[index][1].first][strictRelation[index][1].second].pt);
+		pointSet2.push_back(keyPointsSet[strictRelation[index][0].first][strictRelation[index][0].second].pt);
+		pointSet3.push_back(keyPointsSet[strictRelation[index][3].first][strictRelation[index][3].second].pt);
 	}
+	pointSets.push_back(pointSet1);
+	pointSets.push_back(pointSet2);
+	pointSets.push_back(pointSet3);
 	Mat f12,f13,f23;
 	Mat r12,r13,r23;
 	f12 = findFundamentalMat(pointSet1,pointSet2,CV_FM_RANSAC,1.5,0.99,r12);
@@ -232,7 +237,11 @@ void KeyPointMatch(vector<Mat>& descriptorsSet,vector<KeyPoints>& keyPointsSet,
 	cout << r13 << endl;
 	f23 =  findFundamentalMat(pointSet2,pointSet3,CV_FM_RANSAC,1.5,0.99,r23);
 	cout << r23 << endl;
-	
+	vector<Mat> tensors;
+	ComputeTensor(pointSets,tensors,false);
+	pointSet1 = pointSets[0];
+	pointSet2 = pointSets[1];
+	pointSet3 = pointSets[2];
 	//matchInfos[0];
 	for(size_t index= 0;index < r13.rows;index++)
 	{
@@ -255,12 +264,18 @@ void KeyPointMatch(vector<Mat>& descriptorsSet,vector<KeyPoints>& keyPointsSet,
 		if(--num)
 			continue;*/
 		int pointIndex ,imageIndex;
-		for(int j=0;j<relation[i].size();j++)
+		/*for(int j=0;j<relation[i].size();j++)
 		{
 			imageIndex =  relation[i][j].first;
 			pointIndex = relation[i][j].second;	
 			Point2f pt = keyPointsSet[imageIndex][pointIndex].pt;
 			circle(images[imageIndex],pt,3,Scalar(255.0,255.0,0));
+		}*/
+		for(int i=0;i<pointSet1.size();i++)
+		{
+			circle(images[0],pointSet1[i],3,Scalar(255.0,255.0,0));
+			circle(images[1],pointSet2[i],3,Scalar(255.0,255.0,0));
+			circle(images[2],pointSet3[i],3,Scalar(255.0,255.0,0));
 		}
 		//break;
 	}
